@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<h1>hello_world!!</h1>
-    <p style="color:red">こんにちは</p>
+<h1>食形態</h1>
+    <p style="color:red">おはようございます</p>
 </body>
 </html>

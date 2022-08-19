@@ -8,7 +8,7 @@ class RequestSampleController extends Controller
 {
     public function form()
     {
-      return view(view:'form');
+      return view('form');
     }
 
     public function querystrings(Request $request)
@@ -26,4 +26,25 @@ class RequestSampleController extends Controller
     {
       return 'category: '. $category. '<br>year: '. $year. '<br>page: '. $request->get(key:'page',default: 1);
     }
+
+    public function routeLink()
+    {
+      $url = route('profile', ['id' => 1, 'photos' => 'yes']);
+     
+      return 'プロフィールページのURLは'.$url;
+    }
+
+public function loginform()
+{
+  return view('login');
+}
+
+
+public function login(Request $request)
+{
+    if ($request->get('email') === 'user@example.com' && $request->get('password') === '12345678') {
+        return 'ログイン成功';
+    }
+    return 'ログイン失敗';
+}
 }
